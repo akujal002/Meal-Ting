@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Ting - Livre de recettes</title>
+    <link rel="stylesheet" href="Css/cartes.css">
+    <link rel="stylesheet" href="Css/index.css">
+    <link rel="stylesheet" href="Css/header.css">
+    <link rel="stylesheet" href="Css/popUp.css">
+    <link rel="stylesheet" href="Css/RecettedeTousLesJours.css">
+    <link rel="stylesheet" href="Css/footer.css">
+</head>
+<body>
+    <div id="main">
+        <div id="navbar">
+            <div id="logo">
+                <a href=""><img id="imgLogo" src="img/MEALTING-logo.png" alt="LogoMealTing"></a>
+            </div>
+            <div id="research">
+                <div id="searchBar">
+                    <input id="text" type="text" name="search"></input>
+                    <div id="loopSelect">
+                        <button id="submit" onclick="buttonSearch()"><img id="submitImg" src="img/loop.png" alt=""></button>
+                        <select name="" id="select">
+                            <option class="option" value="Nom">Name</option>
+                            <option class="option" value="Categorie">Category</option>
+                            <option class="option" value="Ingredient">Ingredient</option>
+                            <option class="option" value="Pays">Country</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="lexique">
+                <img id="openLexique" src="img/lexique.svg" alt="" onclick="afficherPopUp()">
+            </div>
+        </div>
+
+        <div id="recetteJour">
+            <div id="titleTextOfTheDay" onclick="searchByName('Chicken Handi')">
+                <h1 id="titleOfTheDay">RECIPES OF ALL DAYS</h1>
+                <p id="textOfTheDay">Chicken Handi</P>
+            </div>
+            <div id="tagsOfTheDay">
+                <p class="textTagsDay" onclick="searchByCategorie('Chicken')">Chicken</p>
+                <p class="textTagsDay" onclick="searchByArea('Indian')">Indian</p>
+            </div>
+        </div>
+        <p class="nosRecettes">Our Recipes</p>
+        <div class="cartes" id="cartes">
+        </div>
+        <div id="btnVoirPlus">
+            <button id="btnVoirPlusText" onclick="afficherPlus()"> VIEW MORE <img id="imgVoirPlus" src="img/arrowDown.png" alt=""></button>
+        </div>
+
+        <div id="footer">
+            <a class="textFooter" href="">Terms of use</a>
+            <a class="textFooter" href="">@copyright 2023</a>
+            <a class="textFooter" href="">Privacy Policy</a>
+        </div>
+    </div>
+
+    <!-- popUp -->
+    <div id="popUp">
+            <img id="CloseLexique" src="img/cross.png" alt="" onclick="fermerPopUp()">
+            <h1 id="titlePopUp">Glossary :</h1>
+            <p id="textPopUp">
+
+            <span>Sauté</span><br><br>Sauté meaning to cook food in oil or fat over heat, usually until it is brown. Example : sauté the onions for five minutes.<br><br><br>
+
+            <span>To sweat</span><br><br>Sweating a food (especially a vegetable) consists of frying it in a pan or saucepan to remove the water, hence the term "sweating".<br><br><br>
+
+            <span>Steaming</span> <br><br>Steaming, otherwise known as low temperature cooking, involves cooking your food over low heat and covered in an airtight container with little fat. It is similar to the steaming process. You may hear of this cooking method for meats and fish, but also for waterlogged vegetables such as zucchini. The food cooks in its own liquid, but if there is not enough liquid (like for some meats), water is added.<br><br><br>
+
+            <span>Line a pie plate</span> <br><br>When making pie crust, you are often asked to darken it. To do this, place your dough in a pan and line the bottom and edges well. Then, simply take a sharp knife and run the blade along the edges to remove the excess dough.<br><br><br>
+
+            <span>Raise the nets</span><br><br>This means that you have to detach the flesh of a fish or meat from its bones. If you think this technique is a bit too delicate for you, you can ask your fishmonger or butcher to do it!<br><br><br>
+
+            <span>Blanching</span> <br><br>When you are asked to blanching almonds or hazelnuts, you have to remove the skin that surrounds them!<br><br><br>
+
+            <span>Glaze</span> <br><br>Sometimes you may be advised to glaze a cake to make it look better and taste better. Here is the definition: to glaze means to decorate the surface of a cake with a glaze, a preparation based on powdered sugar, egg white and sometimes coloring.<br><br><br>
+
+            <span>Poaching</span> <br><br>Poaching a food is putting it in a simmering liquid (water, milk, short broth) to cook it. This technique is also used for meat, fish or fruit.<br><br><br>
+
+            <span>Baste</span> <br><br>This is the process of pouring a liquid such as wine, cooking juice or water over a food. A chicken is basted during cooking to make the meat as tender as possible.<br><br><br>
+
+            <span>Sift</span> <br><br>To sift something is the action of passing a powdered ingredient through a sieve in order to avoid the formation of lumps (these small coagulated masses in liquid preparations like a cake batter).<br><br><br>
+            </p>
+    </div>
+
+    <script src="../Class/Recette.js"></script>
+    <script src="JS/affichage.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/popUp.js"></script>
+    <!-- <script src="JS/filter.js"></script> -->
+    <script src="JS/btnVoirPlus.js"></script>
+
+</body>
+</html>

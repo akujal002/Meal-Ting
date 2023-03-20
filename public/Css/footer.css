@@ -1,0 +1,22 @@
+#footer{
+  display:flex;
+  justify-content:space-between;
+  padding-left:1%;
+  padding-right:1%;
+  background-color:#F6BB83;
+}
+.textFooter{
+  color:black;
+  text-decoration: none;
+  margin:0.2%;
+}
+@media(max-width:600px ){
+  .textFooter{
+    font-size:80%;
+  }
+}
+@media(max-width:450px ){
+  .textFooter{
+    font-size:70%;
+  }
+}

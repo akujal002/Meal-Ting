@@ -1,0 +1,117 @@
+#recetteJour{
+  display:flex;
+  background-image: url('../img/Banner.jpg');
+  background-position:center;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  width:100vw;
+  height:60vh;
+  padding-bottom: 5%;
+}
+
+#titleTextOfTheDay{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  margin-top:5%;
+  padding-left:2%;
+  padding-right:2%;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  transition-duration:0.8s;
+}
+
+#titleTextOfTheDay:hover{
+  transform:scale(1.05);
+
+}
+
+#titleOfTheDay{
+  font-size:300%;
+  text-align:center;
+  animation: apparitionText 1s;
+  animation-fill-mode: backwards;
+}
+
+#textOfTheDay{
+  font-size:200%;
+  animation: apparitionText 1s;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+
+#tagsOfTheDay{
+  padding-top:2%;
+  width:30vw;
+  display:flex;
+  justify-content:space-around;
+  animation: apparitionTag 0.7s;
+  animation-fill-mode:backwards;
+  animation-delay: 0.8s;
+}
+.textTagsDay{
+  color:black;
+  background-color:white;
+  font-size:150%;
+  padding:1%;
+  padding-left:3%;
+  padding-right:3%;
+  border-radius:33px;
+  cursor: pointer;
+  transition-duration:0.4s;
+}
+.textTagsDay:hover{
+  transform: scale(1.1);
+}
+
+@media(max-width:800px){
+  #tagsOfTheDay{
+    width:40vw;
+  }
+  #titleTextOfTheDay{
+    width:80vw;
+  }
+}
+
+@media(max-width:540px){
+  #titleOfTheDay{
+    font-size:250%;
+  }
+  #textOfTheDay{
+    font-size:150%;
+  }
+  #tagsOfTheDay{
+    width:50vw;
+  }
+  #recetteJour{
+    height:50vh;
+  }
+}
+
+@media(max-width:450px){
+  #titleOfTheDay{
+    font-size:250%;
+  }
+  #textOfTheDay{
+    font-size:150%;
+  }
+  #tagsOfTheDay{
+    width:70vw;
+  }
+}
+
+@keyframes apparitionText{
+
+  from{
+    transform:translateX(-2000px);
+  }
+}
+
+@keyframes apparitionTag{
+  0% {opacity:0%}
+  1% {transform: scale(0.5);}
+  50% {transform: scale(1.2);}
+}
+

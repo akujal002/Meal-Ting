@@ -1,0 +1,76 @@
+/*pop-up div*/
+#popUp{
+  display: none;
+  flex-direction: column;
+  position:fixed;
+  z-index:200;
+  background-color:white;
+  border-radius:5px;
+  top:6%;
+  left:25%;
+  width:50vw;
+  height:88vh;
+  animation: apparitionPopUp 1s ease;
+}
+
+/*cross to close the pop-up*/
+#CloseLexique{
+  align-self:flex-end;
+  float:right;
+  width:5%;
+  padding-top:2%;
+  padding-right:2%;
+  cursor: pointer;
+  transform-origin: center;
+  transition-duration:0.4s;
+}
+
+#CloseLexique:hover{
+
+  transform:rotate(-90deg);
+  padding:0;
+  padding-right:2%;
+  padding-bottom:2%;
+}
+/*pop-up content*/
+#titlePopUp{
+  margin:0;
+  text-align:center;
+  padding-bottom:4%;
+}
+#textPopUp{
+  padding-left:5%;
+  padding-right:5%;
+  overflow-Y:auto;
+  word-break: break-word;
+  scrollbar-color: black white;
+  scrollbar-width: thin;
+  text-align:center;
+}
+
+/*Title in the text*/
+#textPopUp>span{
+  text-decoration: underline;
+  font-size:120%;
+}
+
+@keyframes apparitionPopUp{
+
+  from{
+    transform: translateY(1000px);
+
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+
+@keyframes title{
+
+  from{
+    transform:translateY(-2000px);
+  }
+  to{
+    transform:translateY(0px);
+  }
+}

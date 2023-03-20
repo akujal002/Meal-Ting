@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap');
+
+body{
+  margin:0;
+  font-family:Kaisei HarunoUmi;
+  background-color: #272729;
+}
+#main{
+  color:white;
+  background-color: #272729;
+}
+#btnVoirPlus{
+  display:none;
+  justify-content: center;
+  padding:2%;
+}
+
+#btnVoirPlusText{
+  font-size:130%;
+  color:#F6BB83;
+  border:none;
+  font-family:Kaisei HarunoUmi;
+  background-color:transparent;
+  cursor:pointer;
+  transition-duration:1s;
+}
+#imgVoirPlus{
+  width:3%;
+}
+
+#btnVoirPlusText:hover{
+  transform: translateY(10px);
+}
